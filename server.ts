@@ -15,7 +15,7 @@ import { AuthRouter, requireAuth } from './auth.router';
     
     app.use('/auth', AuthRouter);
     
-    app.listen(80, () => {
+    app.listen(8080, () => {
         console.log('listening on 80')
     })
 

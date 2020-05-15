@@ -1,22 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: user-svc
+  name: user
   labels:
-    app: user-svc
+    app: user
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: user-svc
+      app: user
   template:
     metadata:
       labels:
-        app: user-svc
+        app: user
     spec:
       containers:
-      - name: user-svc
-        image: kdjordan/ud-project-udagram-microservices-user
+      - name: udagram-microservices-user
+        image: kdjordan/udagram-microservices-user
         ports:
-        - containerPort: 80
-      
+        - containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 3
+          periodSeconds: 3
