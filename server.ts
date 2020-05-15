@@ -32,8 +32,7 @@ import { AuthRouter, requireAuth } from './auth.router';
         origin: 'http://lcoalhost:8080',
     }));
     
-    app.get('/', (req: Request, res: Response) => {
-        console.log('hitting')
+    app.get('/health', (req: Request, res: Response) => {
         res.send('USER FEED RUNNING')
     });
     
