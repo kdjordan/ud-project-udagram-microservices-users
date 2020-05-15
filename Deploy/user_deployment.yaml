@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: feed-svc
+  name: user-svc
   labels:
-    app: feed-svc
+    app: user-svc
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: feed-svc
+      app: user-svc
   template:
     metadata:
       labels:
-        app: feed-svc
+        app: user-svc
     spec:
       containers:
-      - name: feed-svc
+      - name: user-svc
         image: kdjordan/ud-project-udagram-microservices-user
         ports:
         - containerPort: 80
