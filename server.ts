@@ -9,9 +9,9 @@ import { AuthRouter, requireAuth } from './auth.router';
 
 (async() => {
     const app = express()
-    const V0_USER_MODEL = [User];
-    await sequelize.addModels(V0_USER_MODEL);
-    require('dotenv').config()
+    const V0_USER_MODEL = [User]
+    await sequelize.addModels(V0_USER_MODEL)
+
     
     // app.use('/auth', AuthRouter);
     
