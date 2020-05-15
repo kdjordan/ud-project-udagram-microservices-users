@@ -7,7 +7,7 @@ export class User extends Model<User> {
   public email!: string;
 
   @Column
-  public password_hash!: string;
+  public passwordHash!: string;
 
   @Column
   @CreatedAt

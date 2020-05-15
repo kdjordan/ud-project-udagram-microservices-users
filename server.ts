@@ -13,7 +13,7 @@ import { AuthRouter, requireAuth } from './auth.router';
     await sequelize.addModels(V0_USER_MODEL)
 
     
-    // app.use('/auth', AuthRouter);
+    app.use('/auth', AuthRouter);
     
     app.listen(8082, () => {
         console.log('listening on 8082')
