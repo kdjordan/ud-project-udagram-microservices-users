@@ -2,9 +2,10 @@
   "name": "udagram-microservices-user",
   "version": "1.0.0",
   "description": "This is an API for /users endpoint",
-  "main": "server.js",
+  "main": "server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --respawn --transpileOnly ./server.ts"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "bcrypt": "^3.0.6",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "email-validator": "^2.0.4",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.5.1",
