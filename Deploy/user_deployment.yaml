@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - name: feed-svc
-        image: kdjordan/ud-project-udagram-microservices-users
+        image: kdjordan/ud-project-udagram-microservices-user
         ports:
         - containerPort: 80
+      
