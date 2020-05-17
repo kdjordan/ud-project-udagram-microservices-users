@@ -4,7 +4,6 @@ import {config} from './config';
 
 const c = config.postgress
 
-
 export const sequelize = new Sequelize({
   'username': c.username,
   'password': c.password,

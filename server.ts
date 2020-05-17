@@ -16,7 +16,7 @@ import { AuthRouter, requireAuth } from './auth.router';
     app.use('/auth', AuthRouter);
     
     app.listen(8080, () => {
-        console.log('listening on 80')
+        console.log('listening on 8080')
     })
 
     app.use(bodyParser.json());
@@ -33,7 +33,7 @@ import { AuthRouter, requireAuth } from './auth.router';
     }));
     
     app.get('/health', (req: Request, res: Response) => {
-        res.send('USER FEED RUNNING')
+        res.send('USER SERVICE RUNNING')
     });
     
     app.get('/:id', async (req: Request, res: Response) => {
