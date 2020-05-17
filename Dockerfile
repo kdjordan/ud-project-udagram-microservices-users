@@ -8,14 +8,11 @@ WORKDIR /usr/src/app
 # package.json and package-lock.json
 COPY package*.json ./
 
-# Install dependencies
-RUN npm install
+RUN npm ci 
 
-# Copy app source
+# Bundle app source
 COPY . .
 
-# Bind the port that the image will run on
-EXPOSE 8080
+EXPOSE 80
 
-# Define the Docker image's behavior at runtime
-CMD ["node", "server.ts"]
+CMD [ "npm", "run", "dev" ]
