@@ -4,9 +4,6 @@ import {config} from './config';
 
 const c = config
 
-console.log(c)
-
-
 export const sequelize = new Sequelize({
   'username': c.username,
   'password': c.password,
